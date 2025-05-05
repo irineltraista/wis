@@ -1,0 +1,128 @@
+.video-card-img{
+    position: relative;
+}
+.video-card-img img {
+height: auto;
+aspect-ratio: 16/10;
+object-fit: cover;
+object-position: top center;
+border:2px solid rgba(255, 255, 255, 0.132)
+}
+.card.video-card{
+    border-radius:12px;
+}
+.card-overlay {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+}
+.video-js{
+    background: transparent;
+}
+.video-js.vjs-fluid,
+ video.video-js,
+video.vjs-tech{
+max-height: calc(85vh - 64px);
+position: relative !important;
+width: 100%;
+height: auto !important;
+max-width: 100% !important;
+padding-top: 0 !important;
+line-height: 0;
+}
+.video-js.vjs-fullscreen video{
+    max-height: 100%!important;
+    height:100%!important;
+
+}
+.vjs-control-bar { font-size: 140% }
+
+
+button.play-button.btn.btn-light.rounded-circle {
+    aspect-ratio: 1 / 1;
+}
+button.play-button.btn.btn-light.rounded-circle i {
+    line-height: 1;
+}
+.video-card .card-body {
+    background: transparent;
+    display: flex ;
+    min-height: auto!important;
+}
+button.play-button.btn.btn-light.rounded-circle:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(18,162,255, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+button.btn-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 999;
+}
+.modal-header {
+    display: none !important;
+}
+.mdl-close {
+    font-size: 38px;
+    line-height: 1;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 999;
+    background: var(--accent-blue);
+    border-radius: 100%;
+}
+.mdl-close:before{
+    border:none;
+}
+.modal-body{
+    border-radius: 10px !important;
+    padding:0;
+}
+.vjs-tech {
+border-radius: 10px!important;
+}
+
+
+
+#videoModal .modal-dialog-centered{
+    --bs-modal-width: 92vw !important;
+  }
+
+
+  /*Photoswipe gallery*/
+  .gallery-image-item a img{
+    width:100%!important;
+  }
+  .gallery-image-item{
+    padding:20px;
+    border-radius: 10px!important;
+  }
+ .gallery-image-item a{ 
+    display: flex;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+
+ }
+ .gallery-image-item a img{
+    object-fit: cover;
+    object-position: left top;
+ }
+ .gallery-image-item .video-title {
+    margin-bottom: 0px;
+    display: flex;
+    padding: 20px 5px 10px 5px!important;
+   }

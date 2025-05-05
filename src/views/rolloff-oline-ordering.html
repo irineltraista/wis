@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Roll-Off Online Ordering</title>
+  <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../libs/bootstrap/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../libs/videojs/video-js.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../libs//photoswipe/photoswipe.css">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/single.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-4 pt-4 px-0 ">
+  <div class="breadcrumbs">
+    <a href="../index.html"  class="breadcrumb-icon">
+      <img src="../assets/icons/home.svg" alt="Home">
+    </a>
+    <nav class="breadcrumb-nav">
+      <a href="../index.html">Home</a>
+      <a href="" class="bc-item">Roll-Off Online Ordering</a>
+    </nav>
+  </div>
+</div>
+    <!-- Main Content -->
+    <div class="container my-2 py-1">
+        <div class="pswp-gallery row row-cols-1 row-cols-md-3 g-4" id="gallery--getting-started">
+            <!-- Card 1 -->
+         <div class="col">
+            <div class="gallery-image-item card">
+              <a href="../assets/img/rolloff/enter-details.png"
+                target="_blank">
+                <img src="../assets/img/rolloff/enter-details.png" alt="" />
+              </a>
+              <h5 class="video-title">Enter Details</h5>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col">
+            <div class="gallery-image-item card">
+                <a href="../assets/img/rolloff/location.png"
+                  target="_blank">
+                  <img src="../assets/img/rolloff/location.png" alt="" />
+                </a>
+                <h5 class="video-title">Location</h5>
+              </div>
+            </div>
+        <!-- Card 3 -->
+            <div class="col">
+              <div class="gallery-image-item card">
+                <a href="../assets/img/rolloff/stelect-waste-size.png"
+  
+                  target="_blank">
+                  <img src="../assets/img/rolloff/stelect-waste-size.png" alt="" />
+                </a>
+                <h5 class="video-title">Select Waste & Size</h5>
+
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+              <div class="gallery-image-item card">
+                <a href="../assets/img/rolloff/choose-dates.png"
+    
+                  target="_blank">
+                  <img src="../assets/img/rolloff/choose-dates.png" alt="" />
+                </a>
+                <h5 class="video-title">Choose Dates</h5>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+                <div class="col">
+                  <div class="col gallery-image-item card">
+                    <a href="../assets/img/rolloff/make-payment-online.png"
+               
+                      target="_blank">
+                      <img src="../assets/img/rolloff/make-payment-online.png" alt="" />
+                    </a>
+                    <h5 class="video-title">Make Payment Online</h5>
+    
+                  </div>
+                  </div>
+            <!-- Card 6 -->
+            <div class="col">
+              <div class="col gallery-image-item card">
+                <a href="../assets/img/rolloff/terms-conditions.png"
+           
+                  target="_blank">
+                  <img src="../assets/img/rolloff/terms-conditions.png" alt="" />
+                </a>
+                <h5 class="video-title">Terms and Conditions</h5>
+
+              </div>
+              </div>
+             <!-- Card 7 -->
+  
+
+
+              <!-- END Card 7 -->
+
+
+        </div>
+    </div>
+    
+
+     <!-- End of .container -->
+
+     <script src="../libs/videojs/video.min.js"></script>
+     <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="../js/script.js"></script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const gallery = document.querySelectorAll("#gallery--getting-started a");
+        
+          gallery.forEach(link => {
+            const img = link.querySelector('img');
+        
+            if (img.complete) {
+              // Image is already loaded
+              addDimensions();
+            } else {
+              // Wait for image to load
+              img.addEventListener('load', addDimensions);
+            }
+        
+            function addDimensions() {
+              link.setAttribute('data-pswp-width', img.naturalWidth);
+              link.setAttribute('data-pswp-height', img.naturalHeight);
+            }
+          });
+        });
+        </script>
+        
+        <script type="module">
+            import PhotoSwipeLightbox from '../libs/photoswipe/photoswipe-lightbox.esm.min.js';
+            const lightbox = new PhotoSwipeLightbox({
+              gallery: '#gallery--getting-started',
+              children: 'a',
+              pswpModule: () => import('../libs/photoswipe/photoswipe.esm.min.js')
+            });
+            lightbox.init();
+            </script>
+
+</body>
+</html>
+
+
+
+
